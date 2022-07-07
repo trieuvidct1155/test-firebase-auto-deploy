@@ -13,11 +13,5 @@ jobs:
       - name: deploy firebase
         env:
           firebaseToken: '${{ secrets.FIREBASE_TOKEN }}'
-        uses: actions/checkout@v2
-        run: npm ci && firebase deploy --token ${firebaseToken} --non-interactive
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: ''
-          channelId: live
-          projectId: firebase-git-action
+        - uses: actions/checkout@v2
+        - run: npm ci && firebase deploy --token ${firebaseToken} --non-interactive
