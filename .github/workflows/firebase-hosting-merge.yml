@@ -14,4 +14,6 @@ jobs:
       - name: deploy firebase
         env:
           firebaseToken: '${{ secrets.FIREBASE_TOKEN }}'
-        run: npm ci && firebase deploy --token 1//0eKNip-fs3ENfCgYIARAAGA4SNwF-L9IrhC5IzxLGY60LMJ2py2ljCDImF5CguGRc-ekOwNUQosdD6l0Knhw9M0UR-3VxI_xo9og --non-interactive
+        run: | 
+          npm ci 
+          npm run firebase deploy --token ${firebaseToken} --non-interactive
