@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy-firebase": "firebase deploy --token ${firebaseToken} --non-interactive"
+    "deploy-firebase": "firebase deploy --token ${firebaseToken} --non-interactive --force"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
