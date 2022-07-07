@@ -16,4 +16,4 @@ jobs:
           firebaseToken: '${{ secrets.FIREBASE_TOKEN }}'
         run: | 
           npm ci 
-          npm run firebase deploy --token ${firebaseToken} --non-interactive
+          npm run deploy-firebase
