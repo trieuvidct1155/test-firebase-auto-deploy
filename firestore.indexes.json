@@ -7,7 +7,19 @@
         {
           "fieldPath": "authorName",
           "order": "ASCENDING"
-        }
+        },
+        { "fieldPath": "timestamp", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "authors",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "name",
+          "order": "ASCENDING"
+        },
+        { "fieldPath": "timestamp", "order": "DESCENDING" }
       ]
     }
   ],
